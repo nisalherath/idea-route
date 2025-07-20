@@ -141,7 +141,7 @@ export class PasswordResetModal {
         
         .reset-description {
           margin-bottom: 1.5rem;
-          color: #64748b;
+          color: #d1d5db;
           font-size: 14px;
           line-height: 1.5;
         }
@@ -154,27 +154,33 @@ export class PasswordResetModal {
         .reset-email-input {
           width: 100%;
           padding: 12px 40px 12px 12px;
-          border: 2px solid #e2e8f0;
+          border: 2px solid #4b5563;
           border-radius: 8px;
           font-size: 14px;
           transition: all 0.2s ease;
           box-sizing: border-box;
+          background-color: #374151;
+          color: #f8f8f8;
+        }
+
+        .reset-email-input::placeholder {
+          color: #9ca3af;
         }
         
         .reset-email-input:focus {
           outline: none;
-          border-color: #667eea;
-          box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+          border-color: #3b82f6;
+          box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
         }
         
         .reset-email-input.valid {
           border-color: #22c55e;
-          background-color: #f0fdf4;
+          background-color: #1f2937;
         }
         
         .reset-email-input.error {
           border-color: #ef4444;
-          background-color: #fef2f2;
+          background-color: #1f2937;
         }
         
         .input-icon {
@@ -187,31 +193,31 @@ export class PasswordResetModal {
         }
         
         .error-message {
-          color: #ef4444;
+          color: #fca5a5;
           font-size: 12px;
           margin-top: 0.5rem;
           padding: 0.5rem;
-          background-color: #fef2f2;
+          background-color: #1f2937;
           border-radius: 4px;
           border-left: 3px solid #ef4444;
         }
         
         .success-message {
-          color: #22c55e;
+          color: #86efac;
           font-size: 12px;
           margin-top: 0.5rem;
           padding: 0.5rem;
-          background-color: #f0fdf4;
+          background-color: #1f2937;
           border-radius: 4px;
           border-left: 3px solid #22c55e;
         }
         
         .cooldown-message {
-          color: #f59e0b;
+          color: #fbbf24;
           font-size: 12px;
           margin-top: 0.5rem;
           padding: 0.5rem;
-          background-color: #fffbeb;
+          background-color: #1f2937;
           border-radius: 4px;
           border-left: 3px solid #f59e0b;
         }
@@ -219,13 +225,13 @@ export class PasswordResetModal {
         .security-notice {
           margin-top: 1.5rem;
           padding: 1rem;
-          background-color: #f8fafc;
+          background-color: #1f2937;
           border-radius: 6px;
-          border: 1px solid #e2e8f0;
+          border: 1px solid #374151;
         }
         
         .security-notice small {
-          color: #64748b;
+          color: #d1d5db;
           font-size: 11px;
           line-height: 1.4;
         }
@@ -234,9 +240,9 @@ export class PasswordResetModal {
           display: inline-block;
           width: 16px;
           height: 16px;
-          border: 2px solid #e2e8f0;
+          border: 2px solid #4b5563;
           border-radius: 50%;
-          border-top-color: #667eea;
+          border-top-color: #3b82f6;
           animation: spin 1s ease-in-out infinite;
         }
         

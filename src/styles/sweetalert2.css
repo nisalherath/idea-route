@@ -79,6 +79,7 @@
 
 .swal2-confirm.swal2-responsive-button:hover {
   background: #2563eb !important;
+  color: white !important;
 }
 
 /* Cancel button */
@@ -90,6 +91,7 @@
 
 .swal2-cancel.swal2-responsive-button:hover {
   background: #4b5563 !important;
+  color: #f8f8f8 !important;
 }
 
 /* Icon styling */
@@ -187,11 +189,13 @@
   color: #a0aec0 !important;
   font-size: 2rem !important;
   font-weight: 300 !important;
-  transition: color 0.2s ease !important;
+  transition: all 0.2s ease !important;
 }
 
 .swal2-close:hover {
-  color: #4a5568 !important;
+  color: #f8f8f8 !important;
+  background: rgba(255, 255, 255, 0.1) !important;
+  border-radius: 50% !important;
 }
 
 /* Backdrop */
@@ -284,6 +288,7 @@
 
   .swal2-cancel.swal2-responsive-button:hover {
     background: #2d3748 !important;
+    color: #f7fafc !important;
   }
 
   .swal2-close {
@@ -292,6 +297,7 @@
 
   .swal2-close:hover {
     color: #e2e8f0 !important;
+    background: rgba(255, 255, 255, 0.1) !important;
   }
 }
 
@@ -379,6 +385,62 @@
   color: #f8f8f8 !important;
 }
 
+/* Fix all text elements that might have contrast issues */
+.swal2-popup .swal2-title,
+.swal2-popup .swal2-content,
+.swal2-popup .swal2-html-container,
+.swal2-popup p,
+.swal2-popup span,
+.swal2-popup div,
+.swal2-popup label {
+  color: #f8f8f8 !important;
+}
+
+/* Validation messages and form text */
+.swal2-validation-message {
+  background: #374151 !important;
+  color: #f8f8f8 !important;
+  border: 1px solid #4b5563 !important;
+}
+
+/* Form elements styling */
+.swal2-input-label {
+  color: #f8f8f8 !important;
+}
+
+/* HTML content in SweetAlert */
+.swal2-html-container {
+  color: #f8f8f8 !important;
+}
+
+.swal2-html-container * {
+  color: #f8f8f8 !important;
+}
+
+/* Additional text elements */
+.swal2-popup .swal2-close {
+  color: #9ca3af !important;
+}
+
+.swal2-popup .swal2-close:hover {
+  color: #f8f8f8 !important;
+}
+
+/* Loading text */
+.swal2-popup .swal2-loading {
+  color: #f8f8f8 !important;
+}
+
+/* Custom classes for better contrast */
+.swal2-dark-theme {
+  background: #1f1f1f !important;
+  color: #f8f8f8 !important;
+}
+
+.swal2-dark-theme * {
+  color: #f8f8f8 !important;
+}
+
 /* Additional button styling for better contrast */
 .swal2-styled {
   border: none !important;
@@ -393,13 +455,28 @@
   color: white !important;
 }
 
+.swal2-styled.swal2-confirm:hover {
+  background: #2563eb !important;
+  color: white !important;
+}
+
 .swal2-styled.swal2-cancel {
   background: #374151 !important;
   color: #d1d5db !important;
 }
 
+.swal2-styled.swal2-cancel:hover {
+  background: #4b5563 !important;
+  color: #f8f8f8 !important;
+}
+
 .swal2-styled.swal2-deny {
   background: #ef4444 !important;
+  color: white !important;
+}
+
+.swal2-styled.swal2-deny:hover {
+  background: #dc2626 !important;
   color: white !important;
 }
 

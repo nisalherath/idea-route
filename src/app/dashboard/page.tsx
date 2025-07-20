@@ -60,23 +60,7 @@ const DashboardPage: React.FC = () => {
 
         await signOut();
         
-        // Show success message
-        await Swal.fire({
-          title: 'Signed Out Successfully',
-          text: 'You have been signed out of your account.',
-          icon: 'success',
-          confirmButtonText: 'OK',
-          confirmButtonColor: '#3b82f6',
-          customClass: {
-            popup: 'swal2-responsive-popup',
-            title: 'swal2-responsive-title',
-            htmlContainer: 'swal2-responsive-content',
-            confirmButton: 'swal2-responsive-button'
-          },
-          timer: 2000,
-          timerProgressBar: true
-        });
-
+        // Redirect to auth page (success message is handled by AuthContext)
         router.push('/auth');
       }
     } catch (error) {
