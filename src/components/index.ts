@@ -4,4 +4,4 @@ export { default as AIGenerate } from './AIGenerate';
 export { default as TimePlanner } from './TimePlanner';
 export { default as ErrorBoundary } from './ErrorBoundary';
 export { default as ProtectedRoute } from './ProtectedRoute';
-export { default as PasswordResetModal, usePasswordResetModal } from './PasswordResetModal';
+export { PasswordResetModal, usePasswordResetModal } from './PasswordResetModal';
