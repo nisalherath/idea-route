@@ -1,22 +1,15 @@
-# Idea Route - Suggestion App
+# Idea Route - Modern Productivity Dashboard
 
-A modern, production-ready Next.js application for sharing and discovering suggestions from the community. Built with React 19, Next.js 15, TypeScript, and Firebase.
+A modern, production-ready Next.js application featuring a comprehensive dashboard with integrated productivity tools. Built with React 19, Next.js 15, TypeScript, and Firebase.
 
-## Quick Start
+## Core Features
 
-```bash
-git clone <your-repo-url>
-cd idea-route
-npm install
-npm run dev
-```
-
-## Features
-
-- **Complete Authentication System** - Email/password + Google OAuth
-- **Modern UI/UX** - Mobile-first responsive design with SweetAlert2 notifications
-- **Security First** - Password encryption, input sanitization, protected routes
-- **Production Ready** - TypeScript, Firebase integration, deployment ready
+- **📝 Smart Checklist** - Create, manage, and track your daily tasks with local storage persistence
+- **🤖 AI Content Generator** - Generate ideas, content, strategies, and solutions using AI assistance
+- **⏰ Time Planner** - Organize your schedule with categorized time blocks and progress tracking
+- **🔐 Complete Authentication** - Email/password + Google OAuth with Firebase
+- **🎨 Modern UI/UX** - Dark theme, mobile-first responsive design with smooth animations
+- **🛡️ Security First** - Password encryption, input sanitization, protected routes
 
 ## Documentation
 
@@ -29,13 +22,37 @@ npm run dev
 - Deployment instructions
 - API reference
 
+🏗️ **[Project Structure](./PROJECT_STRUCTURE.md)** - Detailed guide covering:
+- Component organization and folder structure
+- Import strategies and conventions
+- UI component system
+- Constants management
+- Development guidelines
+
 ## Tech Stack
 
 - **Frontend**: Next.js 15, React 19, TypeScript
 - **Authentication**: Firebase Auth
 - **Database**: Firestore
-- **Styling**: CSS Modules
+- **Styling**: CSS Modules with Dark Theme
 - **Notifications**: SweetAlert2
+- **Architecture**: Component-based with centralized state management
+
+## Project Structure
+
+```
+src/
+├── components/           # Organized in feature-based folders
+│   ├── Checklist/       # Smart task management
+│   ├── AIGenerate/      # AI content generation
+│   ├── TimePlanner/     # Schedule management
+│   ├── ui/              # Reusable UI components
+│   └── shared/          # Shared utilities
+├── constants/           # Application constants
+├── context/             # React contexts
+├── hooks/               # Custom React hooks
+└── utils/               # Utility functions
+```
 
 ## Environment Setup
 

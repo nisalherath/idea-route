@@ -5,7 +5,7 @@ import { useRouter } from 'next/navigation';
 import { useAuth } from '@/context/AuthContext';
 import { FormData, FormErrors, AuthMode } from '@/types/auth';
 import { validateAuthForm } from '@/utils/auth';
-import { usePasswordResetModal } from '@/components/PasswordResetModal';
+import { usePasswordResetModal } from '@/components';
 import styles from './Auth.module.css';
 
 const AuthPage: React.FC = () => {

@@ -1,16 +1,18 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 import { useAuth } from '@/context/AuthContext';
 import { useRouter } from 'next/navigation';
 import { useEffect } from 'react';
 import Image from 'next/image';
 import Swal from 'sweetalert2';
 import styles from './Dashboard.module.css';
+import { Checklist, AIGenerate, TimePlanner } from '@/components';
 
 const DashboardPage: React.FC = () => {
   const { user, loading, signOut } = useAuth();
   const router = useRouter();
+  const [activeModal, setActiveModal] = useState<string | null>(null);
 
   // Redirect to auth if not authenticated
   useEffect(() => {
@@ -179,6 +181,50 @@ const DashboardPage: React.FC = () => {
         </div>
 
         <div className={styles.actionSection}>
+          <h3 className={styles.sectionTitle}>Core Functions</h3>
+          <div className={styles.actionGrid}>
+            <button 
+              className={styles.actionCard}
+              onClick={() => setActiveModal('checklist')}
+            >
+              <div className={styles.actionIcon}>✓</div>
+              <div className={styles.actionContent}>
+                <h4 className={styles.actionTitle}>Checklist</h4>
+                <p className={styles.actionDescription}>
+                  Create and manage your daily tasks and to-do items
+                </p>
+              </div>
+            </button>
+
+            <button 
+              className={styles.actionCard}
+              onClick={() => setActiveModal('ai-generate')}
+            >
+              <div className={styles.actionIcon}>🤖</div>
+              <div className={styles.actionContent}>
+                <h4 className={styles.actionTitle}>AI Generate</h4>
+                <p className={styles.actionDescription}>
+                  Generate ideas, content, and solutions using AI assistance
+                </p>
+              </div>
+            </button>
+
+            <button 
+              className={styles.actionCard}
+              onClick={() => setActiveModal('time-planner')}
+            >
+              <div className={styles.actionIcon}>⏰</div>
+              <div className={styles.actionContent}>
+                <h4 className={styles.actionTitle}>Time Planner</h4>
+                <p className={styles.actionDescription}>
+                  Plan and organize your schedule with time blocks
+                </p>
+              </div>
+            </button>
+          </div>
+        </div>
+
+        <div className={styles.actionSection}>
           <h3 className={styles.sectionTitle}>Quick Actions</h3>
           <div className={styles.actionGrid}>
             <button className={styles.actionCard}>
@@ -213,6 +259,17 @@ const DashboardPage: React.FC = () => {
           </div>
         </div>
       </main>
+
+      {/* Modals */}
+      {activeModal === 'checklist' && (
+        <Checklist onClose={() => setActiveModal(null)} />
+      )}
+      {activeModal === 'ai-generate' && (
+        <AIGenerate onClose={() => setActiveModal(null)} />
+      )}
+      {activeModal === 'time-planner' && (
+        <TimePlanner onClose={() => setActiveModal(null)} />
+      )}
     </div>
   );
 };
